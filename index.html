@@ -75,10 +75,7 @@
   .tee-stage{position:relative;background:linear-gradient(160deg,var(--bg-soft),#0b0c10);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
   .tee-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 300px at 60% 30%,rgba(255,176,58,.14),transparent 60%)}
   .tee-stage svg{width:82%;height:auto;filter:drop-shadow(0 25px 40px rgba(0,0,0,.5));position:relative}
-  .tee-stage img{position:relative;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 20px 35px rgba(0,0,0,.5))}
-  .section-img{display:block;width:100%;height:auto;margin:0 auto;border-radius:var(--radius)}
-  .section-img.tall{max-width:380px}
-  .section-img.wide{max-width:960px}
+  .tee-stage img{position:relative;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 25px 40px rgba(0,0,0,.5))}
   .float-tag{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13px;box-shadow:var(--shadow);display:flex;align-items:center;gap:8px}
   .float-tag .pip{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
   .tag-1{top:26px;left:22px;animation:float 5s ease-in-out infinite}
@@ -197,7 +194,9 @@
       </div>
     </div>
     <div class="tee-stage">
-      <img src="images/hero-cutout.png" alt="The POV Tee shown front and back, with a phone in the center chest pocket" width="509" height="597">
+      <div class="float-tag tag-1"><span class="pip"></span> Records hands free</div>
+      <div class="float-tag tag-2"><span class="pip"></span> Fits most phones</div>
+      <img src="images/hero-cutout.png" alt="The POV Tee shown front and back, with a phone in the center chest pocket" width="657" height="631">
     </div>
   </div>
 </section>
@@ -209,7 +208,38 @@
       <span class="eyebrow">Smart design details</span>
       <h2>Built to hold your phone</h2>
     </div>
-    <img class="section-img tall" src="images/how-to.jpg" alt="Smart design details: deep secure pocket, soft inner lining, flexible stretch fabric, breathable mesh panel, and reinforced stitching" width="311" height="624" loading="lazy">
+    <div class="features">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><rect x="8" y="3" width="8" height="16" rx="1.6"/><path d="M11 6h2"/></svg></div>
+        <h3>Deep secure pocket</h3>
+        <p>Holds your phone firmly in place, no bounce.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><circle cx="12" cy="7" r="3"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg></div>
+        <h3>Hands free recording</h3>
+        <p>Made for workouts, travel and content creation.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><path d="M3 9c2-2 4 2 6 0s4-2 6 0 4 2 6 0"/><path d="M3 15c2-2 4 2 6 0s4-2 6 0 4 2 6 0"/></svg></div>
+        <h3>Breathable &amp; comfortable</h3>
+        <p>Moisture-wicking fabric for all-day wear.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/><path d="M8 8l8 8M16 8l-8 8"/></svg></div>
+        <h3>4-way stretch</h3>
+        <p>Moves with you. Built for performance.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M4 10h16M4 14h16"/></svg></div>
+        <h3>Soft inner lining</h3>
+        <p>Protects your phone from scratches.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><path d="M4 12h16" stroke-dasharray="3 3"/><path d="M4 7h16M4 17h16" opacity=".4"/></svg></div>
+        <h3>Reinforced stitching</h3>
+        <p>Durable construction for everyday use.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -217,12 +247,30 @@
 <section id="fit" class="spot">
   <div class="wrap spot-grid">
     <div class="phone-visual">
-      <img class="section-img" src="images/size.jpg" alt="Fits most phones — compatible with iPhone 15 Pro Max, Samsung S24 Ultra, Google Pixel 8 Pro and more. Max height 6.7in, width 3.3in, thickness 0.6in" width="306" height="273" loading="lazy">
+      <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" aria-label="Phone fits the pocket">
+        <defs><linearGradient id="pv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5a3c"/><stop offset="1" stop-color="#ffb03a"/></linearGradient></defs>
+        <rect x="90" y="60" width="120" height="150" rx="16" fill="url(#pv)"/>
+        <rect x="90" y="60" width="120" height="30" rx="14" fill="#1a1206" opacity=".2"/>
+        <rect x="115" y="24" width="70" height="150" rx="12" fill="#0e0f13" stroke="#6ee7c7" stroke-width="3"/>
+        <rect x="126" y="40" width="48" height="110" rx="5" fill="#16181f"/>
+        <circle cx="150" cy="36" r="3" fill="#6ee7c7"/>
+      </svg>
     </div>
     <div>
       <span class="eyebrow">Fits most phones</span>
       <h2 style="font-size:clamp(26px,4vw,38px);margin:0 0 10px;letter-spacing:-.02em">Your phone, cradled at chest height</h2>
       <p style="color:var(--muted);font-size:16.5px;margin:0">Flexible stretch fabric fits a wide range of phones, with or without a case.</p>
+      <ul class="fits-list">
+        <li><span class="chk">&#10003;</span> iPhone 15 Pro Max</li>
+        <li><span class="chk">&#10003;</span> Samsung S24 Ultra</li>
+        <li><span class="chk">&#10003;</span> Google Pixel 8 Pro</li>
+        <li><span class="chk">&#10003;</span> …and most other phones</li>
+      </ul>
+      <div class="dims">
+        <div><b>6.7"</b><span>Max height</span></div>
+        <div><b>3.3"</b><span>Max width</span></div>
+        <div><b>0.6"</b><span>Max thickness</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -234,7 +282,24 @@
       <span class="eyebrow">Perfect for</span>
       <h2>Wherever you point it</h2>
     </div>
-    <img class="section-img wide" src="images/perfect-for.jpg" alt="Perfect for running, workouts, travel and content creation" width="593" height="264" loading="lazy">
+    <div class="pf">
+      <figure class="item">
+        <img src="images/running.jpg" alt="Running while recording hands free with The POV Tee" width="147" height="231" loading="lazy">
+        <h3>Running</h3>
+      </figure>
+      <figure class="item">
+        <img src="images/workouts.jpg" alt="Filming a workout hands free with The POV Tee" width="147" height="231" loading="lazy">
+        <h3>Workouts</h3>
+      </figure>
+      <figure class="item">
+        <img src="images/travel.jpg" alt="Capturing travel POV footage with The POV Tee" width="147" height="231" loading="lazy">
+        <h3>Travel</h3>
+      </figure>
+      <figure class="item">
+        <img src="images/content-creation.jpg" alt="Creating content hands free with The POV Tee" width="147" height="231" loading="lazy">
+        <h3>Content creation</h3>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -245,7 +310,13 @@
       <span class="eyebrow">How it works</span>
       <h2>Five seconds to hands free</h2>
     </div>
-    <img class="section-img wide" src="images/howitworks.jpg" alt="How it works in five steps: 1 slide your phone into the pocket, 2 position the camera at the top, 3 make sure it's secure, 4 step back and record, 5 get the shot hands free" width="962" height="205" loading="lazy">
+    <div class="steps">
+      <div class="step"><img src="images/how-1.jpg" alt="" width="140" height="118" loading="lazy"><h3>Slide your phone into the pocket</h3></div>
+      <div class="step"><img src="images/how-2.jpg" alt="" width="140" height="118" loading="lazy"><h3>Position the camera at the top</h3></div>
+      <div class="step"><img src="images/how-3.jpg" alt="" width="140" height="118" loading="lazy"><h3>Make sure it's secure</h3></div>
+      <div class="step"><img src="images/how-4.jpg" alt="" width="140" height="118" loading="lazy"><h3>Step back and record</h3></div>
+      <div class="step"><img src="images/how-5.jpg" alt="" width="140" height="118" loading="lazy"><h3>Get the shot. Hands free.</h3></div>
+    </div>
   </div>
 </section>
 
