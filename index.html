@@ -112,10 +112,10 @@
 
   /* Perfect for */
   .pf{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .pf .item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 18px;text-align:center;transition:transform .2s}
+  .pf .item{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center;transition:transform .2s}
   .pf .item:hover{transform:translateY(-4px)}
-  .pf .item .ic{width:52px;height:52px;margin:0 auto 14px;border-radius:14px;background:linear-gradient(135deg,rgba(255,90,60,.18),rgba(255,176,58,.12));display:flex;align-items:center;justify-content:center}
-  .pf .item h3{margin:0;font-size:15px;font-weight:650}
+  .pf .item img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+  .pf .item h3{margin:0;padding:14px 10px;font-size:15px;font-weight:650}
   @media(max-width:640px){.pf{grid-template-columns:1fr 1fr}}
 
   /* Colors / products */
@@ -300,22 +300,22 @@
       <h2>Wherever you point it</h2>
     </div>
     <div class="pf">
-      <div class="item">
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><circle cx="15" cy="5" r="2"/><path d="M13 9l-3 4 4 2-1 6M14 15l4 1M9 13l-3 1"/></svg></div>
+      <figure class="item">
+        <img src="images/running.jpg" alt="Running while recording hands free with The POV Tee" width="147" height="231" loading="lazy">
         <h3>Running</h3>
-      </div>
-      <div class="item">
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><circle cx="12" cy="5" r="2"/><path d="M12 7v6M7 10h10M8 13l-2 6M16 13l2 6"/></svg></div>
+      </figure>
+      <figure class="item">
+        <img src="images/workouts.jpg" alt="Filming a workout hands free with The POV Tee" width="147" height="231" loading="lazy">
         <h3>Workouts</h3>
-      </div>
-      <div class="item">
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><path d="M4 15l16-6M8 9l3-4 9 3M12 9V5"/><circle cx="11" cy="18" r="1.6"/></svg></div>
+      </figure>
+      <figure class="item">
+        <img src="images/travel.jpg" alt="Capturing travel POV footage with The POV Tee" width="147" height="231" loading="lazy">
         <h3>Travel</h3>
-      </div>
-      <div class="item">
-        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffb03a" stroke-width="1.6"><rect x="5" y="6" width="14" height="12" rx="2"/><path d="M10 10l5 2-5 2z" fill="#ffb03a" stroke="none"/></svg></div>
+      </figure>
+      <figure class="item">
+        <img src="images/content-creation.jpg" alt="Creating content hands free with The POV Tee" width="147" height="231" loading="lazy">
         <h3>Content creation</h3>
-      </div>
+      </figure>
     </div>
   </div>
 </section>
