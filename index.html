@@ -75,6 +75,7 @@
   .tee-stage{position:relative;background:linear-gradient(160deg,var(--bg-soft),#0b0c10);border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
   .tee-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 300px at 60% 30%,rgba(255,176,58,.14),transparent 60%)}
   .tee-stage svg{width:82%;height:auto;filter:drop-shadow(0 25px 40px rgba(0,0,0,.5));position:relative}
+  .tee-stage img{position:relative;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 25px 40px rgba(0,0,0,.5))}
   .float-tag{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13px;box-shadow:var(--shadow);display:flex;align-items:center;gap:8px}
   .float-tag .pip{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
   .tag-1{top:26px;left:22px;animation:float 5s ease-in-out infinite}
@@ -114,7 +115,7 @@
   .pf{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
   .pf .item{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center;transition:transform .2s}
   .pf .item:hover{transform:translateY(-4px)}
-  .pf .item img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+  .pf .item img{display:block;width:100%;height:auto}
   .pf .item h3{margin:0;padding:14px 10px;font-size:15px;font-weight:650}
   @media(max-width:640px){.pf{grid-template-columns:1fr 1fr}}
 
@@ -124,6 +125,7 @@
   .product:hover{transform:translateY(-5px)}
   .product .art{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
   .product .art svg{width:70%}
+  .product .art img{width:100%;height:100%;object-fit:cover}
   .product .body{padding:16px 18px 20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
   .product h3{margin:0;font-size:16px;font-weight:650}
   .product .price{font-weight:800;font-size:16px}
@@ -133,6 +135,7 @@
   .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;counter-reset:step}
   .step{position:relative;padding:24px 22px;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius)}
   .step::before{counter-increment:step;content:"0" counter(step);font-size:38px;font-weight:850;color:var(--line);display:block;margin-bottom:6px}
+  .step img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);margin-bottom:14px}
   .step h3{margin:0;font-size:15px;font-weight:640;line-height:1.35}
   @media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
 
@@ -193,27 +196,7 @@
     <div class="tee-stage">
       <div class="float-tag tag-1"><span class="pip"></span> Records hands free</div>
       <div class="float-tag tag-2"><span class="pip"></span> Fits most phones</div>
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Tee with center chest phone pocket">
-        <defs>
-          <linearGradient id="teeg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b2f3b"/><stop offset="1" stop-color="#171a22"/></linearGradient>
-          <linearGradient id="pkt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5a3c"/><stop offset="1" stop-color="#ffb03a"/></linearGradient>
-        </defs>
-        <!-- shirt body + sleeves -->
-        <path d="M168 78
-                 L128 66 L74 100 L96 156 Q100 164 112 160 L112 340
-                 Q200 356 288 340 L288 160 Q300 164 304 156 L326 100 L272 66 L232 78
-                 Q200 104 168 78 Z"
-              fill="url(#teeg)" stroke="#3a3f4f" stroke-width="2" stroke-linejoin="round"/>
-        <!-- crew neck collar (ribbed band) -->
-        <path d="M168 78 Q200 104 232 78" fill="none" stroke="#4a5061" stroke-width="8" stroke-linecap="round"/>
-        <path d="M164 74 Q200 102 236 74" fill="none" stroke="#20242f" stroke-width="3" stroke-linecap="round"/>
-        <!-- chest-level pocket -->
-        <rect x="168" y="126" width="64" height="70" rx="10" fill="url(#pkt)" opacity=".95"/>
-        <rect x="168" y="126" width="64" height="16" rx="8" fill="#1a1206" opacity=".28"/>
-        <!-- phone peeking from pocket, camera at top -->
-        <rect x="180" y="100" width="40" height="74" rx="7" fill="#0e0f13" stroke="#6ee7c7" stroke-width="2"/>
-        <circle cx="200" cy="110" r="3" fill="#6ee7c7"/>
-      </svg>
+      <img src="images/hero-cutout.png" alt="The POV Tee shown front and back, with a phone in the center chest pocket" width="657" height="631">
     </div>
   </div>
 </section>
@@ -328,11 +311,11 @@
       <h2>Five seconds to hands free</h2>
     </div>
     <div class="steps">
-      <div class="step"><h3>Slide your phone into the pocket</h3></div>
-      <div class="step"><h3>Position the camera at the top</h3></div>
-      <div class="step"><h3>Make sure it's secure</h3></div>
-      <div class="step"><h3>Step back and record</h3></div>
-      <div class="step"><h3>Get the shot. Hands free.</h3></div>
+      <div class="step"><img src="images/how-1.jpg" alt="" width="140" height="118" loading="lazy"><h3>Slide your phone into the pocket</h3></div>
+      <div class="step"><img src="images/how-2.jpg" alt="" width="140" height="118" loading="lazy"><h3>Position the camera at the top</h3></div>
+      <div class="step"><img src="images/how-3.jpg" alt="" width="140" height="118" loading="lazy"><h3>Make sure it's secure</h3></div>
+      <div class="step"><img src="images/how-4.jpg" alt="" width="140" height="118" loading="lazy"><h3>Step back and record</h3></div>
+      <div class="step"><img src="images/how-5.jpg" alt="" width="140" height="118" loading="lazy"><h3>Get the shot. Hands free.</h3></div>
     </div>
   </div>
 </section>
@@ -347,19 +330,19 @@
     </div>
     <div class="products">
       <div class="product">
-        <div class="art" style="background:linear-gradient(160deg,#1a1a1a,#0c0c0c)"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M60 34 L38 55 L28 78 L48 92 L56 78 L56 172 Q100 182 144 172 L144 78 L152 92 L172 78 L162 55 L140 34 Q100 55 60 34Z" fill="#1c1c1c" stroke="#333" stroke-width="2"/><rect x="82" y="92" width="36" height="52" rx="6" fill="#0c0c0c" stroke="#444"/></svg></div>
+        <div class="art"><img src="images/color-black.jpg" alt="The POV Tee in Black" width="150" height="145" loading="lazy"></div>
         <div class="body"><h3>Black</h3><span class="price">$44</span></div>
       </div>
       <div class="product">
-        <div class="art" style="background:linear-gradient(160deg,#2b2b2b,#161616)"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M60 34 L38 55 L28 78 L48 92 L56 78 L56 172 Q100 182 144 172 L144 78 L152 92 L172 78 L162 55 L140 34 Q100 55 60 34Z" fill="#3a3a3a" stroke="#555" stroke-width="2"/><rect x="82" y="92" width="36" height="52" rx="6" fill="#242424" stroke="#5a5a5a"/></svg></div>
+        <div class="art"><img src="images/color-charcoal.jpg" alt="The POV Tee in Charcoal" width="150" height="145" loading="lazy"></div>
         <div class="body"><h3>Charcoal</h3><span class="price">$44</span></div>
       </div>
       <div class="product">
-        <div class="art" style="background:linear-gradient(160deg,#3a4020,#20240f)"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M60 34 L38 55 L28 78 L48 92 L56 78 L56 172 Q100 182 144 172 L144 78 L152 92 L172 78 L162 55 L140 34 Q100 55 60 34Z" fill="#4a5028" stroke="#5c6333" stroke-width="2"/><rect x="82" y="92" width="36" height="52" rx="6" fill="#363b1e" stroke="#5c6333"/></svg></div>
+        <div class="art"><img src="images/color-olive.jpg" alt="The POV Tee in Olive" width="150" height="145" loading="lazy"></div>
         <div class="body"><h3>Olive</h3><span class="price">$44</span></div>
       </div>
       <div class="product">
-        <div class="art" style="background:linear-gradient(160deg,#3a3225,#1c1812)"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M60 34 L38 55 L28 78 L48 92 L56 78 L56 172 Q100 182 144 172 L144 78 L152 92 L172 78 L162 55 L140 34 Q100 55 60 34Z" fill="#c8ac82" stroke="#a88f68" stroke-width="2"/><rect x="82" y="92" width="36" height="52" rx="6" fill="#b89a6e" stroke="#8a734d"/></svg></div>
+        <div class="art"><img src="images/color-beige.jpg" alt="The POV Tee in Beige" width="150" height="145" loading="lazy"></div>
         <div class="body"><h3>Beige</h3><span class="price">$44</span></div>
       </div>
     </div>
